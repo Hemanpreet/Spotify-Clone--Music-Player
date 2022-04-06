@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+font-family:'ubuntu',sans-serif;
+position:sticky;
+}
+
+nav ul{
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+    height:65px;
+    background-color: black;
+    color:white;
+ 
+    
+}
+nav ul li{
+    padding:0 12px;
+}
+.brand img{
+    width:44px;
+    padding:0 8px;
+}
+
+.brand{
+    display:flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+
+}
+.container{
+    min-height: 60vh;
+    /* 60vh means 60% of height*/
+    background-color: black;
+    color:white;
+    font-family:'Varela Round',sans-serif;
+    display: flex;
+    margin:12px auto;
+    width:70%;
+    border-radius: 12px;
+    padding:12px;
+   background-image: url("download.jpg");
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: 70vh 60vh;
+}
+
+.bottom{
+    position:sticky;
+    height:100px;
+    background-color: black;
+    color:white;
+    bottom:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* so now elements of bottom container which is progress bar will be aligned to center */
+    flex-direction:column;
+    /* so items->>progress bar and items will be aligned vertically one after other */
+
+}
+.icons{
+    margin-top:5px;
+}
+.icons i{
+    cursor:pointer;
+}
+
+#myProgressBar{
+    width:80vw;
+    cursor: pointer;
+}
+
+.songItem{
+height:50px;
+display: flex;
+background-color: white;
+color:black;
+margin:12px 0;
+justify-content: space-between;
+align-items: center;
+border-radius: 15px ;
+}
+.songItem img{
+width:40px;
+margin:0 12px;
+border-radius: 20px;
+}
+.timestamp{
+  margin:0 23px;
+}
+.timestamp i{
+    cursor: pointer;
+}
+.songInfo{
+    position: absolute;
+    left:10vw;
+    font-family:'Varela Round',sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    /* when we will do opacity:1 then we want our playing.gif to ease in so whenever we play a song then with help of javaScript we will make its opacity:1 and our playing.gif to ease in*/
+    transition: opacity 0.4s ease-in;
+}
